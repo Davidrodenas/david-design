@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f0f0f;
+  --black: #000;
+  --white: #ffffff;
+  --cyan: #00ffff;
+  --cobalt: #0007cd;
+  --ghost: rgba(255, 255, 255, 0.6);
+  --whisper: rgba(255, 255, 255, 0.45);
+  --b10: rgba(255, 255, 255, 0.10);
+  --b08: rgba(255, 255, 255, 0.08);
+  --b06: rgba(255, 255, 255, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-jetbrains);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.08); border-radius: 99px; }
+::selection { background: rgba(0, 255, 255, 0.2); }
+
+input, textarea {
+  font-family: inherit;
+  color: var(--white);
+}
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Mono utility */
+.font-mono {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace !important;
+}
+
+/* Blink cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0; }
+}
+
+/* Tag overline component */
+.tag {
+  display: inline-block;
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: rgba(0, 255, 255, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 2px;
+  padding: 3px 8px;
+  background: rgba(0, 255, 255, 0.05);
+}
+
+/* Overline label */
+.overline {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Section max-width wrapper */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
