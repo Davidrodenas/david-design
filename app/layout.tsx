@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { DM_Sans, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
@@ -16,6 +16,11 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains',
   weight: ['400', '500'],
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: 'David Ródenas — Automatización con IA',

@@ -70,6 +70,10 @@ input::placeholder, textarea::placeholder {
   .nav-hamburger { display: flex !important; }
 }
 
+/* Prevent horizontal overflow on mobile */
+body { overflow-x: hidden; }
+main { overflow-x: hidden; }
+
 /* Mono utility */
 .font-mono {
   font-family: var(--font-jetbrains), 'JetBrains Mono', monospace !important;
