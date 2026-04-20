@@ -61,7 +61,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop links */}
-        <div style={{ display: 'flex', gap: 32, alignItems: 'center' }} className="hidden-mobile">
+        <div className="nav-desktop">
           {LINKS.map((l) => {
             const active = pathname === l.href;
             return (
@@ -111,16 +111,7 @@ export default function Nav() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menú"
-          style={{
-            display: 'none',
-            flexDirection: 'column',
-            gap: 5,
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            padding: '4px',
-          }}
-          className="show-mobile"
+          className="nav-hamburger"
         >
           <span
             style={{

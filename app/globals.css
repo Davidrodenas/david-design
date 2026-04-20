@@ -50,10 +50,24 @@ input::placeholder, textarea::placeholder {
   color: rgba(255, 255, 255, 0.25);
 }
 
-/* Mobile nav */
+/* Nav responsive */
+.nav-desktop {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
 @media (max-width: 768px) {
-  .hidden-mobile { display: none !important; }
-  .show-mobile { display: flex !important; }
+  .nav-desktop { display: none; }
+  .nav-hamburger { display: flex; }
 }
 
 /* Mono utility */
