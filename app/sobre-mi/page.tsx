@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -48,14 +49,16 @@ export default function SobreMi() {
             </div>
           </div>
 
-          {/* Photo placeholder */}
+          {/* Photo */}
           <div>
-            <div style={{ width: '100%', aspectRatio: '4/5', maxWidth: 360, margin: '0 auto', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 12, position: 'relative', overflow: 'hidden' }}>
-              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: `linear-gradient(90deg, transparent, rgba(${ACCENT_RGB},0.4), transparent)` }} />
-              <div style={{ width: 80, height: 80, borderRadius: '50%', background: `radial-gradient(circle, rgba(${ACCENT_RGB},0.15) 0%, rgba(0,7,205,0.2) 100%)`, border: `1px solid rgba(${ACCENT_RGB},0.15)`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ fontFamily: mono, fontSize: 24, color: `rgba(${ACCENT_RGB},0.4)`, letterSpacing: '-1px' }}>DR</div>
-              </div>
-              <div style={{ fontFamily: mono, fontSize: 10, color: 'rgba(255,255,255,0.2)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Foto · Próximamente</div>
+            <div style={{ width: '100%', aspectRatio: '4/5', maxWidth: 360, margin: '0 auto', borderRadius: 4, overflow: 'hidden', position: 'relative', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <Image
+                src="/david.jpg"
+                alt="David Ródenas"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                priority
+              />
             </div>
           </div>
         </div>
