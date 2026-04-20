@@ -66,8 +66,8 @@ input::placeholder, textarea::placeholder {
   padding: 4px;
 }
 @media (max-width: 768px) {
-  .nav-desktop { display: none; }
-  .nav-hamburger { display: flex; }
+  .nav-desktop { display: none !important; }
+  .nav-hamburger { display: flex !important; }
 }
 
 /* Mono utility */
@@ -115,5 +115,8 @@ input::placeholder, textarea::placeholder {
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
+  }
+  .proceso-grid {
+    grid-template-columns: 1fr !important;
   }
 }

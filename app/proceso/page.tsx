@@ -434,13 +434,6 @@ export default function Proceso() {
         </div>
       </section>
 
-      <style>{`
-        @media (max-width: 768px) {
-          .proceso-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </main>
   );
 }
