@@ -50,6 +50,12 @@ input::placeholder, textarea::placeholder {
   color: rgba(255, 255, 255, 0.25);
 }
 
+/* Mobile nav */
+@media (max-width: 768px) {
+  .hidden-mobile { display: none !important; }
+  .show-mobile { display: flex !important; }
+}
+
 /* Mono utility */
 .font-mono {
   font-family: var(--font-jetbrains), 'JetBrains Mono', monospace !important;

@@ -208,12 +208,6 @@ export default function Nav() {
         </Link>
       </div>
 
-      <style>{`
-        @media (max-width: 768px) {
-          .hidden-mobile { display: none !important; }
-          .show-mobile { display: flex !important; }
-        }
-      `}</style>
     </>
   );
 }
